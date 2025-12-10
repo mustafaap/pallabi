@@ -1493,37 +1493,53 @@ body {
           animation-delay: 2.3s;
 }
 
-@-webkit-keyframes moving-flower-4 {
-  0%, 100% {
-    transform: translateX(-120%) rotate(-25deg);
-  }
-  50% {
-    transform: translateX(-120%) rotate(-28deg);
-  }
+/* New flower 9 - 3rd from left */
+.flower--9 {
+  left: 50%;
+  transform: translateX(-95%) rotate(-8deg);
+  -webkit-animation: moving-flower-9 4s linear infinite;
+          animation: moving-flower-9 4s linear infinite;
 }
-@keyframes moving-flower-4 {
-  0%, 100% {
-    transform: translateX(-120%) rotate(-25deg);
-  }
-  50% {
-    transform: translateX(-120%) rotate(-28deg);
-  }
+.flower--9 .flower__line {
+  height: 77.5vmin;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
+}
+.flower--9 .flower__line__leaf--1 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2.9s backwards;
+          animation: blooming-leaf-right var(--fl-speed) 2.9s backwards;
+}
+.flower--9 .flower__line__leaf--2 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2.7s backwards;
+          animation: blooming-leaf-right var(--fl-speed) 2.7s backwards;
+}
+.flower--9 .flower__line__leaf--3 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 2.5s backwards;
+          animation: blooming-leaf-left var(--fl-speed) 2.5s backwards;
+}
+.flower--9 .flower__line__leaf--4 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 2.3s backwards;
+          animation: blooming-leaf-left var(--fl-speed) 2.3s backwards;
+}
+.flower__leafs--9 {
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
 }
 
-@-webkit-keyframes moving-flower-5 {
+@-webkit-keyframes moving-flower-9 {
   0%, 100% {
-    transform: translateX(20%) rotate(25deg);
+    transform: translateX(-95%) rotate(-8deg);
   }
   50% {
-    transform: translateX(20%) rotate(22deg);
+    transform: translateX(-95%) rotate(-11deg);
   }
 }
-@keyframes moving-flower-5 {
+@keyframes moving-flower-9 {
   0%, 100% {
-    transform: translateX(20%) rotate(25deg);
+    transform: translateX(-95%) rotate(-8deg);
   }
   50% {
-    transform: translateX(20%) rotate(22deg);
+    transform: translateX(-95%) rotate(-11deg);
   }
 }
 
