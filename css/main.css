@@ -113,7 +113,7 @@ body {
           animation: moving-flower-1 4s linear infinite;
 }
 .flower--1 .flower__line {
-  height: 90vmin;
+  height: 85vmin;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
@@ -1435,7 +1435,7 @@ body {
           animation: moving-flower-4 4s linear infinite;
 }
 .flower--4 .flower__line {
-  height: 75vmin;
+  height: 80vmin;
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
 }
@@ -1468,7 +1468,7 @@ body {
           animation: moving-flower-5 4s linear infinite;
 }
 .flower--5 .flower__line {
-  height: 72vmin;
+  height: 70vmin;
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
