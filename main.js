@@ -14,3 +14,14 @@ document.addEventListener("visibilitychange", () => {
     flowers.style.animationPlayState = "running";
   }
 });
+
+// Detect mobile and reduce animations
+if (window.innerWidth <= 768) {
+  document.querySelectorAll('.flower__light').forEach(el => {
+    el.style.display = 'none';
+  });
+  
+  document.querySelectorAll('.long-g').forEach((el, i) => {
+    if (i > 4) el.style.display = 'none';
+  });
+}

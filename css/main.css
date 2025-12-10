@@ -945,6 +945,38 @@ body {
   }
 }
 
+/* Add at the top for better mobile performance */
+.flowers,
+.flower,
+.sunflower,
+.leaf,
+.long-g {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Reduce animations on mobile */
+@media (max-width: 768px) {
+  .night {
+    filter: none;
+  }
+  
+  .flower__light {
+    display: none; /* Hide floating particles */
+  }
+  
+  .flowers {
+    transform: scale(0.7);
+  }
+  
+  /* Simplify or disable some animations */
+  .long-g--6,
+  .long-g--7 {
+    display: none;
+  }
+}
+
 .long-g {
   position: absolute;
   bottom: 25vmin;
