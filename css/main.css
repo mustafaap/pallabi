@@ -31,6 +31,71 @@ body {
   background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), linear-gradient(90deg, rgb(7, 107, 42), rgb(240, 240, 240));
 }
 
+/* Pretty Moon */
+.moon {
+  position: fixed;
+  top: 6vh;
+  right: 12vw;
+  width: 20vmin;
+  height: 20vmin;
+  background: linear-gradient(135deg, #fffde7 0%, #fff9c4 50%, #ffe082 100%);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 15vmin 4vmin rgba(255, 255, 200, 0.3),
+    0 0 30vmin 8vmin rgba(255, 255, 150, 0.15),
+    0 0 60vmin 15vmin rgba(255, 255, 100, 0.1),
+    inset -3vmin -2vmin 6vmin rgba(200, 180, 100, 0.3);
+  z-index: 1;
+  animation: moon-glow 4s ease-in-out infinite;
+}
+
+/* Moon craters */
+.moon::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 4vmin;
+  height: 4vmin;
+  background: radial-gradient(circle, rgba(200, 190, 150, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 
+    5vmin 2vmin 0 -1vmin rgba(200, 190, 150, 0.3),
+    2vmin 7vmin 0 0.5vmin rgba(200, 190, 150, 0.25),
+    8vmin 5vmin 0 -1.2vmin rgba(200, 190, 150, 0.35),
+    -3vmin 4vmin 0 -0.5vmin rgba(200, 190, 150, 0.2);
+}
+
+/* Moon highlight */
+.moon::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 5vmin;
+  height: 3vmin;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  filter: blur(0.8vmin);
+}
+
+@keyframes moon-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 15vmin 4vmin rgba(255, 255, 200, 0.3),
+      0 0 30vmin 8vmin rgba(255, 255, 150, 0.15),
+      0 0 60vmin 15vmin rgba(255, 255, 100, 0.1),
+      inset -3vmin -2vmin 6vmin rgba(200, 180, 100, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 18vmin 5vmin rgba(255, 255, 200, 0.4),
+      0 0 40vmin 10vmin rgba(255, 255, 150, 0.2),
+      0 0 70vmin 18vmin rgba(255, 255, 100, 0.12),
+      inset -3vmin -2vmin 6vmin rgba(200, 180, 100, 0.3);
+  }
+}
+
 .flowers {
   position: relative;
   transform: scale(0.9);
@@ -968,12 +1033,21 @@ body {
   
   .flowers {
     transform: scale(0.7);
+    bottom: 15vh; /* Move flowers up from the very bottom */
+    position: relative;
   }
   
   /* Simplify or disable some animations */
   .long-g--6,
   .long-g--7 {
     display: none;
+  }
+  
+  .moon {
+    width: 15vmin;
+    height: 15vmin;
+    top: 5vh;
+    right: 8vw;
   }
 }
 
